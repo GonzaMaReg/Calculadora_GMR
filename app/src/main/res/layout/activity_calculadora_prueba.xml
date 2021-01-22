@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_margin="0.3dp"
+    android:layout_marginStart="0.3dp"
+    android:layout_marginLeft="0.3dp"
+    android:layout_marginTop="0.3dp"
+    android:layout_marginEnd="0.3dp"
+    android:layout_marginRight="0.3dp"
+    android:layout_marginBottom="0.3dp"
+    android:background="@color/fondo1"
+    android:orientation="vertical"
+    tools:context=".Calculadora">
+
+    <TextView
+        android:id="@+id/textViewoperacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="36sp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_weight="0.3" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonC"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/limpiar1"
+                android:fontFamily="@font/amiko"
+                android:onClick="borrar_todo"
+                android:text="C"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/buttonX"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/simbolos1"
+                android:fontFamily="@font/amiko"
+                android:onClick="elevado2"
+                android:text="x²"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/button10X"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/simbolos1"
+                android:fontFamily="@font/amiko"
+                android:onClick="elevadoy"
+                android:text="@string/elevado_y"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/buttonPI"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/simbolos1"
+                android:fontFamily="@font/amiko"
+                android:onClick="Numeropi"
+                android:text="@string/simbolo_pi"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonCE"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/limpiar1"
+                android:fontFamily="@font/amiko"
+                android:onClick="borrar_numero"
+                android:text="CE"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/buttonraiz"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/simbolos1"
+                android:fontFamily="@font/amiko"
+                android:onClick="raiz"
+                android:text="@string/simbolo_raiz"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/buttonPORCENTAJ"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/simbolos1"
+                android:fontFamily="@font/amiko"
+                android:onClick="porcentaje"
+                android:text="%"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/buttonSUMAR"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/simbolos1"
+                android:fontFamily="@font/amiko"
+                android:onClick="suma"
+                android:text="+"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="Numero1"
+                android:text="1"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="Numero2"
+                android:text="2"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="Numero3"
+                android:text="3"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/buttonRESTAR"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/simbolos1"
+                android:fontFamily="@font/amiko"
+                android:onClick="restar"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="Numero4"
+                android:text="4"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="Numero5"
+                android:text="5"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="Numero6"
+                android:text="6"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/buttonMULTI"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/simbolos1"
+                android:fontFamily="@font/amiko"
+                android:onClick="multiplicar"
+                android:text="x"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="Numero7"
+                android:text="7"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/button8"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="Numero8"
+                android:text="8"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/button9"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="Numero9"
+                android:text="9"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/buttonDIV"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/simbolos1"
+                android:fontFamily="@font/amiko"
+                android:onClick="dividir"
+                android:text="/"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button0"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="Numero0"
+                android:text="0"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/buttondecoracion"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="creditos"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/button."
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/numeros1"
+                android:fontFamily="@font/supermercado_one"
+                android:onClick="decimal"
+                android:text="."
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/buttonCalcular"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="92dp"
+                android:layout_height="70dp"
+                android:background="@color/igual1"
+                android:fontFamily="@font/amiko"
+                android:onClick="igual"
+                android:text="="
+                android:textAlignment="center"
+                android:textSize="26sp" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

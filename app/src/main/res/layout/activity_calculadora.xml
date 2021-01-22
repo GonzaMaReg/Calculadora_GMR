@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light"
+    tools:context=".Calculadora">
+
+    <TextView
+        android:id="@+id/textViewoperacion"
+        android:layout_width="383dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPI"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="Numeropi"
+        android:text="@string/simbolo_pi"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSUMAR"
+        app:layout_constraintStart_toEndOf="@+id/button10X" />
+
+    <Button
+        android:id="@+id/button10X"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="elevadoy"
+        android:text="@string/elevado_y"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPORCENTAJ"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSUMAR"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toEndOf="@+id/buttonraiz" />
+
+    <Button
+        android:id="@+id/buttonraiz"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="raiz"
+        android:text="@string/simbolo_raiz"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonX"
+        app:layout_constraintStart_toEndOf="@+id/buttonCE" />
+
+    <Button
+        android:id="@+id/buttonCE"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_red_light"
+        android:fontFamily="@font/amiko"
+        android:onClick="borrar_numero"
+        android:text="CE"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonC"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_red_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="borrar_todo"
+        android:text="C"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toStartOf="@+id/buttonX" />
+
+    <Button
+        android:id="@+id/buttonX"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="elevado2"
+        android:text="x²"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPORCENTAJ" />
+
+    <Button
+        android:id="@+id/buttonPORCENTAJ"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="porcentaje"
+        android:text="%"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSUMAR" />
+
+    <Button
+        android:id="@+id/buttonSUMAR"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="suma"
+        android:text="+"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRESTAR"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRESTAR"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="restar"
+        android:text="-"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMULTI"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMULTI"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="multiplicar"
+        android:text="x"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDIV"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDIV"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="dividir"
+        android:text="/"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalcular"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_green_dark"
+        android:fontFamily="@font/amiko"
+        android:onClick="igual"
+        android:text="="
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button."
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="decimal"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttondecoracion" />
+
+    <Button
+        android:id="@+id/buttondecoracion"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button0" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="Numero0"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="Numero9"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/button."
+        app:layout_constraintStart_toEndOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="Numero6"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintStart_toEndOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="Numero3"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintStart_toEndOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="Numero8"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/buttondecoracion"
+        app:layout_constraintStart_toEndOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="Numero2"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintStart_toEndOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="Numero5"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintStart_toEndOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="Numero7"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/button0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="Numero4"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/colorPressedHighlight"
+        android:fontFamily="@font/bangers"
+        android:onClick="Numero1"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

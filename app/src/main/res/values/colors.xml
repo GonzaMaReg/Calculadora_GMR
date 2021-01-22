@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="fondo">#defcf9</color>
+    <color name="simbolos">#cadefc</color>
+    <color name="numeros">#c3bef0</color>
+    <color name="limpiar">#cca8e9</color>
+    <color name="igual">#a384bc</color>
+
+    <color name="fondo1">#f7fbfc</color>
+    <color name="simbolos1">#d6e6f2</color>
+    <color name="numeros1">#b9d7ea</color>
+    <color name="limpiar1">#769fcd</color>
+    <color name="igual1">#658dba</color>
+
+    <color name="fondo2">#dff4f3</color>
+    <color name="simbolos2">#dde7f2</color>
+    <color name="numeros2">#b9bbdf</color>
+    <color name="limpiar2">#878ecd</color>
+    <color name="igual2">#7278b3</color>
+
+    <color name="fondo3">#303a52</color>
+    <color name="simbolos3">#574b90</color>
+    <color name="numeros3">#9e579d</color>
+    <color name="limpiar3">#fc85ae</color>
+    <color name="igual3">#d76a90</color>
+
+    <color name="fondo4">#ffd9e8</color>
+    <color name="simbolos4">#de95ba</color>
+    <color name="numeros4">#7f4a88</color>
+    <color name="limpiar4">#4a266a</color>
+    <color name="igual4">#3f1266</color>
+</resources>
